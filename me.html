@@ -4,13 +4,27 @@
         <title>htmlCssProject</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+        <meta property="og:url"           content="file:///Users/jchen6/Documents/coding/web%20development/html%20&amp;&amp;%20css%20project/htmlCssProject%20copy/me.html" />
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> 
+        <link rel="stylesheet" href="css/contact.css">    
     </head>
     <body>
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
         <div class="container">
             <nav class="navbar navbar-inverse navnar-fixed-top">
                 <div class="container-fluid">
@@ -43,50 +57,96 @@
                                 </ul>
                     </div>
                  </div>
-            </nav>
+            </nav>                
 
-                
-
-
-            <div class="col-md-12 text-left">
+        <div class="col-md-12 text-left">
               <h1 class ="title-super text-thin">About me</h1>
-            </div>
+        </div>       
 
-            <div class="col-md-12 text-left">
-            <blockquote>
-            <p>There is no such thing as a 'self-made' man. We are made up of thousands of others. Everyone who has ever done a kind deed for us, or spoken one word of encouragement to us, has entered into the make-up of our character and of our thoughts, as well as our success.</p>
-            <footer>George Burton Adams</footer>
-            </blockquote>
-            </div>
+        <div class="col-md-12 text-left">
+        <blockquote>
+        <p>There is no such thing as a 'self-made' man. We are made up of thousands of others. Everyone who has ever done a kind deed for us, or spoken one word of encouragement to us, has entered into the make-up of our character and of our thoughts, as well as our success.</p>
+        <footer>George Burton Adams</footer>
+        </blockquote>
+        </div>
 
-            <div class="me">
-            <div class="row text-left">
-                    <div class="col-md-12">
-                        
-                           <h5> <font size="5"> I would love to learn from you.Following are my contact information:</font></h5>
-                                <dl>
-                                    <dt>Email:</dt>
-                                        <dd>
-                                            <p>
-                                                <a href="mailto:jchen49gsu@gmail.com?Subject=Hello%20" target="_top">Send me Email</a>
-                                            </p>
-                                        </dd>
-                                    <dt>Linkedin:</dt>
-                                        <dd> 
-                                             <p>
-                                            <a href="https://www.linkedin.com/in/jchen3/">Visit my Linkedin</a>
-                                            </p>
-                                        </dd>
-                                    <dt>Github:</dt>
-                                        <dd> 
-                                            <a href="https://github.com/jchen49gsu">Visit my Github</a>
-                                        </dd>
-                                </dl>
+        <div class="me">
+        <div class="row text-left">
+                <div class="col-md-12">
                     
-                    </div>
+                       <h5> <font size="5"> I would love to learn from you.Following are my contact information:</font></h5>
+                            <dl>
+                                <dt>Email:</dt>
+                                    <dd>
+                                        <p>
+                                            <a href="mailto:jchen49gsu@gmail.com?Subject=Hello%20" target="_top">Send me Email</a>
+                                        </p>
+                                    </dd>
+                                <dt>Linkedin:</dt>
+                                    <dd> 
+                                         <p>
+                                        <a href="https://www.linkedin.com/in/jchen3/">Visit my Linkedin</a>
+                                        </p>
+                                    </dd>
+                                <dt>Github:</dt>
+                                    <dd> 
+                                        <a href="https://github.com/jchen49gsu">Visit my Github</a>
+                                    </dd>
+                                    <dt>Sample project:</dt>
+                                    <dd> 
+                                        <a href="project.html">Visit my project for photographer</a>
+                                    </dd>
+                            </dl>
+                
                 </div>
             </div>
         </div>
+
+        <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your and my next project.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+
+
+        <!-- Google Map -->
+        <div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+
+        <!-- Add Google Maps -->
+        <script>
+        function myMap()
+        {
+          myCenter=new google.maps.LatLng(41.878114, -87.629798);
+          var mapOptions= {
+            center:myCenter,
+            zoom:12, scrollwheel: false, draggable: false,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+          };
+          var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+          var marker = new google.maps.Marker({
+            position: myCenter,
+          });
+          marker.setMap(map);
+        }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+      </div>
+
+
+
+
 
     <!-- Footer -->
         <footer class="py-5 bg-dark">
